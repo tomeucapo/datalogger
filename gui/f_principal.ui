@@ -1,0 +1,715 @@
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>Datalogger</class>
+ <widget class="QMainWindow" name="Datalogger" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>757</width>
+    <height>627</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy>
+    <hsizetype>0</hsizetype>
+    <vsizetype>0</vsizetype>
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>Hermes Datalogger 2.2</string>
+  </property>
+  <property name="statusTip" >
+   <string comment="Off-line" />
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QGridLayout" >
+    <property name="margin" >
+     <number>9</number>
+    </property>
+    <property name="spacing" >
+     <number>6</number>
+    </property>
+    <item row="1" column="0" >
+     <widget class="QTabWidget" name="tabWidget" >
+      <widget class="QWidget" name="resultats" >
+       <attribute name="title" >
+        <string>Datalogger</string>
+       </attribute>
+       <layout class="QGridLayout" >
+        <property name="margin" >
+         <number>9</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item row="0" column="0" >
+         <widget class="QTableWidget" name="t_resultat" >
+          <property name="maximumSize" >
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="grafica" >
+       <attribute name="title" >
+        <string>Gràfica</string>
+       </attribute>
+       <layout class="QVBoxLayout" >
+        <property name="margin" >
+         <number>9</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="estat_entrades" >
+       <attribute name="title" >
+        <string>Estat d'entrades/sortides</string>
+       </attribute>
+       <layout class="QHBoxLayout" >
+        <property name="margin" >
+         <number>9</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="g_analogiques" >
+          <property name="title" >
+           <string>Analògiques</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="g_digitals" >
+          <property name="title" >
+           <string>Digitals</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="3" column="0" >
+     <widget class="QProgressBar" name="b_progres" >
+      <property name="autoFillBackground" >
+       <bool>false</bool>
+      </property>
+      <property name="value" >
+       <number>0</number>
+      </property>
+      <property name="orientation" >
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="textDirection" >
+       <enum>QProgressBar::TopToBottom</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" >
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>0</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="groupBox" >
+        <property name="maximumSize" >
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="title" >
+         <string>Connexió</string>
+        </property>
+        <widget class="QRadioButton" name="c_local" >
+         <property name="geometry" >
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>83</width>
+           <height>18</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>Local</string>
+         </property>
+         <property name="checked" >
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="c_rmt" >
+         <property name="geometry" >
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>83</width>
+           <height>18</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>Remota</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2" >
+        <property name="minimumSize" >
+         <size>
+          <width>16</width>
+          <height>130</height>
+         </size>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="title" >
+         <string>Estació</string>
+        </property>
+        <widget class="QLabel" name="label_40" >
+         <property name="geometry" >
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>105</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>N. total de regs.:</string>
+         </property>
+         <property name="alignment" >
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_41" >
+         <property name="geometry" >
+          <rect>
+           <x>40</x>
+           <y>60</y>
+           <width>72</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>Num. Sèrie:</string>
+         </property>
+         <property name="alignment" >
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="c_num_regs" >
+         <property name="geometry" >
+          <rect>
+           <x>120</x>
+           <y>90</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="frameShape" >
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow" >
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text" >
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="c_nserie" >
+         <property name="geometry" >
+          <rect>
+           <x>120</x>
+           <y>60</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="frameShape" >
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow" >
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text" >
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="c_clau" >
+         <property name="enabled" >
+          <bool>false</bool>
+         </property>
+         <property name="geometry" >
+          <rect>
+           <x>490</x>
+           <y>30</y>
+           <width>81</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="maxLength" >
+          <number>10</number>
+         </property>
+         <property name="echoMode" >
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_38" >
+         <property name="geometry" >
+          <rect>
+           <x>380</x>
+           <y>30</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>Clau d'access:</string>
+         </property>
+         <property name="alignment" >
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="c_vfirmware" >
+         <property name="geometry" >
+          <rect>
+           <x>490</x>
+           <y>60</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="frameShape" >
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow" >
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text" >
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_37" >
+         <property name="geometry" >
+          <rect>
+           <x>390</x>
+           <y>60</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>Ver. Firmware:</string>
+         </property>
+         <property name="alignment" >
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="c_num_dades" >
+         <property name="geometry" >
+          <rect>
+           <x>490</x>
+           <y>90</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="frameShape" >
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow" >
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text" >
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_39" >
+         <property name="geometry" >
+          <rect>
+           <x>360</x>
+           <y>90</y>
+           <width>122</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>Regs. descarregats:</string>
+         </property>
+         <property name="alignment" >
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label" >
+         <property name="geometry" >
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>61</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text" >
+          <string>Estació:</string>
+         </property>
+         <property name="alignment" >
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="c_estacions" >
+         <property name="enabled" >
+          <bool>false</bool>
+         </property>
+         <property name="geometry" >
+          <rect>
+           <x>120</x>
+           <y>30</y>
+           <width>261</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="editable" >
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0" >
+     <widget class="QLabel" name="l_inst" >
+      <property name="sizePolicy" >
+       <sizepolicy>
+        <hsizetype>7</hsizetype>
+        <vsizetype>7</vsizetype>
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize" >
+       <size>
+        <width>16777215</width>
+        <height>13</height>
+       </size>
+      </property>
+      <property name="frameShape" >
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow" >
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text" >
+       <string/>
+      </property>
+      <property name="alignment" >
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>757</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuUtilitats" >
+    <property name="title" >
+     <string>Utilitats</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAjuda" >
+    <property name="title" >
+     <string>Ajuda</string>
+    </property>
+    <addaction name="actionAbout" />
+   </widget>
+   <widget class="QMenu" name="menuUtilitats_2" >
+    <property name="title" >
+     <string>Utilitats</string>
+    </property>
+    <addaction name="actionAjustar_Data" />
+    <addaction name="actionBorrarDatalogger" />
+   </widget>
+   <widget class="QMenu" name="menuFitxer" >
+    <property name="title" >
+     <string>Fitxer</string>
+    </property>
+    <addaction name="actionGuardar" />
+    <addaction name="actionLlibreta" />
+    <addaction name="actionConfigurar" />
+    <addaction name="separator" />
+    <addaction name="actionSortir" />
+   </widget>
+   <addaction name="menuFitxer" />
+   <addaction name="menuUtilitats_2" />
+   <addaction name="menuAjuda" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>605</y>
+     <width>757</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="statusTip" >
+    <string>Off-Line</string>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar" >
+   <property name="contextMenuPolicy" >
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <attribute name="toolBarArea" >
+    <number>4</number>
+   </attribute>
+   <addaction name="actionGuardar" />
+   <addaction name="actionConfigurar" />
+   <addaction name="actionLlibreta" />
+   <addaction name="separator" />
+   <addaction name="actionConnectar" />
+   <addaction name="actionDesconnectar" />
+   <addaction name="separator" />
+   <addaction name="actionDescarregar" />
+   <addaction name="actionBorrarDatalogger" />
+   <addaction name="actionAjustar_Data" />
+   <addaction name="separator" />
+   <addaction name="actionSortir" />
+  </widget>
+  <action name="actionSortir" >
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/sortir.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Sortir</string>
+   </property>
+   <property name="statusTip" >
+    <string>Sortir del programa ...</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionGuardar" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/guardar.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Guardar</string>
+   </property>
+   <property name="toolTip" >
+    <string>Guardar les dades descarregades del datalogger</string>
+   </property>
+   <property name="statusTip" >
+    <string>Guardar les dades descarregades del datalogger</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionConfigurar" >
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/preferencies.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Preferències</string>
+   </property>
+   <property name="statusTip" >
+    <string>Configurar els paràmetres del programa</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionLlibreta" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/llibreta.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Manteniment d'estacions</string>
+   </property>
+   <property name="iconText" >
+    <string>Estacions</string>
+   </property>
+   <property name="toolTip" >
+    <string>Estacions</string>
+   </property>
+   <property name="statusTip" >
+    <string>Manteniment d'estacions</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionAbout" >
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/about.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Sobre el programa ...</string>
+   </property>
+  </action>
+  <action name="actionConnectar" >
+   <property name="checkable" >
+    <bool>false</bool>
+   </property>
+   <property name="checked" >
+    <bool>false</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/connectar.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Connectar</string>
+   </property>
+  </action>
+  <action name="actionDescarregar" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/baixar.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Descarregar</string>
+   </property>
+  </action>
+  <action name="actionDesconnectar" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/desconnectar.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Desconnectar</string>
+   </property>
+  </action>
+  <action name="actionAjustar_Data" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/rellotge.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Ajustar data/hora</string>
+   </property>
+  </action>
+  <action name="actionBorrarDatalogger" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="icon" >
+    <iconset resource="recursos.qrc" >:/icones/Icones/buidar.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Buidar datalogger</string>
+   </property>
+  </action>
+ </widget>
+ <pixmapfunction></pixmapfunction>
+ <resources>
+  <include location="recursos.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>c_rmt</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>c_clau</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>102</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>666</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>c_local</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>c_clau</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>102</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>686</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>c_local</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>c_estacions</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>89</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>256</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>c_rmt</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>c_estacions</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>53</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>265</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1"
+   name=""
+   committed-date="2007-03-08T20:57:50.652879Z"
+   url="svn+ssh://www.museu-tecnologic.org/home/tomeu/repos/datalogger/trunk/gui/Icones"
+   last-author="tomeu"
+   kind="dir"
+   uuid="7121b88f-565b-464d-86ff-cd2bb54e61ae"
+   revision="7"/>
+<entry
+   committed-rev="1"
+   name="afegir.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="08f5a8f3221141a1691a6b62f34d9ca3"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="microcom.ico"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="4bf278849b6f2a1e785d4d68fe785e47"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="llibreta.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="ebdaa89e9a2d5934459d8d26f4d6970e"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Thumbs.db"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="697b096ec811dd09ce7dfcc2f1d8451f"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="buidar.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="002cdabc76f1579d399bb738bf875491"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="baixar.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="22c650cd68f22505c1f0d44213be4267"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="microcom.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="7342138853676ac56e85a1006e230404"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="desconnectar.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="457afe7d7c86060cf820b11a04a53838"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="ok.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="de2b60e6680ad2b75daad87de55b4b02"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="preferencies.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="94e1c0f4596589ffbbd76758a533afdf"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="about.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="3c9923b26d681ab3f0fe59dafc0ee7a2"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="connectar.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="755629f41502d3566b2847d991b3f78b"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="rellotge.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="8c1a04cb8bece3bd1e7e24dc9605e450"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="sortir.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="93906759f79ca8f6b2df4288e4e11968"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="cancel.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="54a1afb80c9146a663aeb5fef25d8906"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+<entry
+   committed-rev="1"
+   name="guardar.png"
+   text-time="2009-03-26T23:19:27.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="f8bd2eef1f173e8370ffb7bf1b5c4230"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:27.000000Z"/>
+</wc-entries>
