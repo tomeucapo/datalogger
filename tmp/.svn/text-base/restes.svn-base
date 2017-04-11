@@ -1,0 +1,60 @@
+        if self.tipus_conn == 2:
+           print "jj"   
+              #for i in range(10):
+              #    self.ui.b_progres.setValue(i*100/10)
+              #    time.sleep(0.02)
+              #    linia = self.ser.readline()
+              #    if re.findall(r'GsmReady',linia):
+              #       self.cont = True
+              #       break
+              #    else:
+              #       if re.findall(r'GsmSimNotPresent',linia):
+              #          self.cont = True
+              #          QtGui.QMessageBox.warning(self,self.tr("Alerta!"),"L'Hermes no te la tarja SIM del GSM intal·lada!")
+              #          break
+        else:
+           if telefon == '':
+                 QtGui.QMessageBox.critical(self,self.tr("Error"),"No ha possat un nombre de telèfon")
+              else:
+                 self.ui.statusbar.showMessage("Inicialitzant ...")
+                 
+                 self.ser.write(self.modem_init+"\r\n") 
+                 print self.ser.readline()
+		 
+                 self.ui.statusbar.showMessage("Marcant "+telefon+" ...")
+                 print "Marcant: "+self.modem_dial+telefon
+
+                 try:
+		            self.ser.write(self.modem_dial+telefon+"\r\n")
+                 except:
+	                print "Error enviant comanda AT al MODEM"
+                 else:
+                    self.ui.statusbar.showMessage("Esperant connexió ...");  
+                    for i in range(30):
+                        self.ui.b_progres.setValue(i*100/29)
+                        if re.findall(r'CONNECT',self.ser.readline()):
+                           self.ui.b_progres.setValue(100)
+                           print "Connectat ..."
+                           self.cont = True
+                           break
+                        else:
+                           if re.findall(r'CARRIER',self.ser.readline()):
+                              QtGui.QMessageBox.critical(self,self.tr("Error"),"No hi ha tò de marcatge") 
+                              break
+                    if self.cont:
+                       self.ui.statusbar.showMessage("Autenticant ...");
+                       print str(self.ui.c_clau.text())
+                       
+                       if not autenticar(self.ser, str(self.ui.c_clau.text())):
+                          QtGui.QMessageBox.critical(self,self.tr("Error"),"La contrasenya no és correcte!")
+                          self.cont = False
+                    
+           #if self.cont: 
+             
+           #else:
+           #   QtGui.QMessageBox.critical(self, self.tr("Error"),"No hem puc possar en contacte amb l'Hermes!")
+              #self.ser.close()
+           #   self.ui.statusbar.showMessage("Off-Line")
+           #   self.ui.actionConnectar.setEnabled(1)
+
+           #self.ui.b_progres.setValue(0)  

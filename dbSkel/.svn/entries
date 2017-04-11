@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1"
+   name=""
+   committed-date="2007-03-08T20:57:50.652879Z"
+   url="svn+ssh://www.museu-tecnologic.org/home/tomeu/repos/datalogger/trunk/dbSkel"
+   last-author="tomeu"
+   kind="dir"
+   uuid="7121b88f-565b-464d-86ff-cd2bb54e61ae"
+   revision="7"/>
+<entry
+   committed-rev="1"
+   name="skel.sql"
+   text-time="2009-03-26T23:19:26.000000Z"
+   committed-date="2007-03-08T20:57:50.652879Z"
+   checksum="05efefbc2b3eaa2cda34f1f08da72c71"
+   last-author="tomeu"
+   kind="file"
+   prop-time="2009-03-26T23:19:26.000000Z"/>
+</wc-entries>
