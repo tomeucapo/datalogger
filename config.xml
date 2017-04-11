@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-15'?>
+<configuracio>
+  <portserie>
+     <disp>/dev/tty.usbserial-3B1</disp>
+     <baud>9600</baud>
+  </portserie>
+  <modem>
+     <init>AT S7=45 S0=0 L1 V1 X4 </init>
+     <dial>ATD</dial>
+  </modem>
+  <hermes>
+     <max_ent_analog>4</max_ent_analog>
+     <max_ent_digit>8</max_ent_digit>
+  </hermes>
+</configuracio>
